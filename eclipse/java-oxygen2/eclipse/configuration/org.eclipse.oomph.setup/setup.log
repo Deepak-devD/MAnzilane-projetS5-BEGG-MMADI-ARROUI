@@ -1,0 +1,55 @@
+[2017-11-09 21:12:41] Executing bootstrap tasks
+[2017-11-09 21:12:41] OpenJDK Runtime Environment 1.8.0_144-8u144-b01-2-b01
+[2017-11-09 21:12:41] Product org.eclipse.products.epp.package.java.oxygen
+[2017-11-09 21:12:41] Bundle org.eclipse.oomph.setup 1.8.0.v20170408-0745, build=3059, branch=2161405b80cf99ed791602ba56cdf44084f5ca43
+[2017-11-09 21:12:41] Bundle org.eclipse.oomph.setup.core 1.8.0.v20170531-0903, build=3059, branch=2161405b80cf99ed791602ba56cdf44084f5ca43
+[2017-11-09 21:12:41] Bundle org.eclipse.oomph.setup.p2 1.8.0.v20170318-0419, build=3059, branch=2161405b80cf99ed791602ba56cdf44084f5ca43
+[2017-11-09 21:12:41] Performing P2 Director (Eclipse IDE for Java Developers (Oxygen))
+[2017-11-09 21:12:41] Offline = false
+[2017-11-09 21:12:41] Mirrors = true
+[2017-11-09 21:12:41] Resolving 24 requirements from 3 repositories to /home/mmadi/eclipse/java-oxygen2/eclipse
+[2017-11-09 21:12:41] Requirement epp.package.java [4.7.0,4.8.0)
+[2017-11-09 21:12:41] Requirement org.eclipse.platform.feature.group [4.7.0,4.8.0)
+[2017-11-09 21:12:41] Requirement org.eclipse.rcp.feature.group [4.7.0,4.8.0)
+[2017-11-09 21:12:41] Requirement org.eclipse.buildship.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.eclemma.feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.egit.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.egit.mylyn.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.jdt.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.jgit.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.m2e.feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.m2e.logback.feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.mylyn.bugzilla_feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.mylyn.context_feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.mylyn.git.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.mylyn.hudson.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.mylyn.ide_feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.mylyn.java_feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.mylyn.wikitext_feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.mylyn_feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.recommenders.mylyn.rcp.feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.recommenders.rcp.feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.recommenders.snipmatch.rcp.feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.wst.xml_ui.feature.feature.group
+[2017-11-09 21:12:41] Requirement org.eclipse.oomph.setup.feature.group
+[2017-11-09 21:12:41] Repository http://download.eclipse.org/technology/epp/packages/oxygen
+[2017-11-09 21:12:41] Repository http://download.eclipse.org/releases/oxygen
+[2017-11-09 21:12:41] Repository http://download.eclipse.org/oomph/updates/milestone/latest
+[2017-11-09 21:12:41] ERROR: org.eclipse.equinox.p2.transport.ecf code=1006 Unknown Host: http://download.eclipse.org/oomph/updates/milestone/latest/compositeContent.xml
+java.net.UnknownHostException: download.eclipse.org
+  at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+  at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+  at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+  at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+  at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+  at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+  at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)
+  at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+  at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+  at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+  at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+  at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+  at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+  at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+[2017-11-09 21:12:41] 
