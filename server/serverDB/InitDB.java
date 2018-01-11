@@ -23,10 +23,10 @@ public class InitDB {
 				id = rs.getInt("idPerson");
 				firstName = rs.getString("firstName");
 				lastName = rs.getString("lastName");
-				salt = SaltGenTest.saltValueGen();
-				userName = UsernameAndPassGenTest.userNameGen(lastName, firstName, id);
-				pwd = UsernameAndPassGenTest.passWordGen(lastName, firstName, id);
-				hashValue = SaltGenTest.hashValueGen(pwd, salt);
+				salt = SaltGen.saltValueGen();
+				userName = UsernameAndPassGen.userNameGen(lastName, firstName, id);
+				pwd = UsernameAndPassGen.passWordGen(lastName, firstName, id);
+				hashValue = SaltGen.hashValueGen(pwd, salt);
 				rs.updateString("userName", userName);
 				rs.updateString("salt", salt);
 				rs.updateString("hashValue", hashValue);
