@@ -10,7 +10,9 @@ public class RequestDB implements DBRequestInterface {
 		this.conn = connect.connectToDB();
 	}
 
-	public ArrayList<String> getGroups(int idPerson){
+	public ArrayList<String> getGroups(String userName){
+		String idPersonString = userName.replaceAll("[^0-9]", "");
+		int idPerson = Integer.parseInt(idPersonString);
 		ArrayList<String> groupList = new ArrayList<String>();
 		try {
 			String nameGrp = "";
