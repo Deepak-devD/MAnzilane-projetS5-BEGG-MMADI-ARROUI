@@ -16,7 +16,7 @@ public class Connect {
 		}
 	}
 
-	public void disconnect(Connection conn){
+	public void disconnect(Connection conn) throws SQLException{
 		conn.close();
 	}
 }

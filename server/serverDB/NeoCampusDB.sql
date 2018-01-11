@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS PERSON
 	 CONSTRAINT pk_user PRIMARY KEY (idPerson),
 	 CONSTRAINT ck_last CHECK (lastName IS NOT NULL),
 	 CONSTRAINT ck_first CHECK (firstName IS NOT NULL),
-	 UNIQUE KEY ix_person (lastName, firstName)
+	 UNIQUE KEY ix_person (lastName, firstName, type)
 );
 
 CREATE TABLE IF NOT EXISTS GROUPE
@@ -74,26 +74,26 @@ ALTER TABLE PERSON AUTO_INCREMENT=1000;
 ALTER TABLE MESSAGE AUTO_INCREMENT=1;
 ALTER TABLE TICKET AUTO_INCREMENT=1;
 
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Barriol", "Luc", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Begg", "Alexandra", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Cabantos", "Claire", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Veillith", "Michel", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Vernier", "Florence", 'SERVICE');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Walbaum", "Ghislaine", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Walbaum", "Laurence", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Ziffer", "Elizabeth", 'SERVICE');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Arroui", "Sid", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Mmadi", "Anzilane", 'SERVICE');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Perrnot", "Patricia", 'SERVICE');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Poirier", "Francois", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Samson", "Christine", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Sciandra", "Philippe", 'SERVICE');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Snethlage", "Michel", 'SERVICE');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Teyssier", "Agnes", 'SERVICE');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Vernier", "Elisabeth", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Armand", "Michael", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Astier", "Nicole", 'CAMPUS');
-INSERT IGNORE INTO PERSON (lastName, firstName) VALUES ("Brunier", "Gilles", 'SERVICE');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Barriol", "Luc", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Begg", "Alexandra", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Cabantos", "Claire", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Veillith", "Michel", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Vernier", "Florence", 'SERVICE');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Walbaum", "Ghislaine", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Walbaum", "Laurence", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Ziffer", "Elizabeth", 'SERVICE');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Arroui", "Sid", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Mmadi", "Anzilane", 'SERVICE');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Perrnot", "Patricia", 'SERVICE');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Poirier", "Francois", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Samson", "Christine", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Sciandra", "Philippe", 'SERVICE');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Snethlage", "Michel", 'SERVICE');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Teyssier", "Agnes", 'SERVICE');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Vernier", "Elisabeth", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Armand", "Michael", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Astier", "Nicole", 'CAMPUS');
+INSERT IGNORE INTO PERSON (lastName, firstName, type) VALUES ("Brunier", "Gilles", 'SERVICE');
 
 
 INSERT IGNORE INTO GROUPE VALUES ("INFORMATIQUE", 'CAMPUS');

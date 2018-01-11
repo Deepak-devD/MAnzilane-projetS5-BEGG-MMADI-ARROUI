@@ -47,7 +47,7 @@ public class RequestDB implements DBRequestInterface {
 		} catch (Exception e){
 			e.printStackTrace();
 			System.err.println("Unable to count unread messages");
-			return 00;
+			return -1;
 		}
 	}
 
@@ -90,17 +90,37 @@ public class RequestDB implements DBRequestInterface {
 		} catch (Exception e){
 			e.printStackTrace();
 			System.err.println("Unable to count unread messages");
-			return 00;
+			return -1;
 		}
 	}
 
-	// public String[] getTicketMessages(int idTicket){
-	// 	// int i = 0;
-	// 	// String[] msgList;
-	// 	// try {
-	// 	// 	state = conn.createStatement();
-	// 	// 	String sql = "SELECT * FROM TICKET T, MESSAGE M, RECEIVE R"
-	// 	// }
+	// public ArrayList<String> getTicketMessages(int idTicket){
+	// 	ArrayList<String> ticketList = new ArrayList<String>();
+	// 	try {
+	// 		int ticketID;
+	// 		String ticketTitle = "", ticketInfo = ""; 
+	// 		state = conn.createStatement();
+	// 		String sql = "SELECT T.idTicket, T.title FROM PERSON P, TICKET T, GROUPE G WHERE P.idPerson = " + idPerson +" AND G.nameGrp = \"" + groupName + "\" AND G.nameGrp = T.nameGrp;";
+	// 		ResultSet rs = state.executeQuery(sql);
+	// 		rs.beforeFirst();
+	// 		while (rs.next()){
+	// 			ticketID = rs.getInt("T.idTicket");
+	// 			ticketTitle = rs.getString("T.title");
+	// 			ticketInfo = ticketID + "/" + ticketTitle;
+	// 			ticketList.add(ticketInfo);
+	// 		}
+	// 		for (int i = 0; i < ticketList.size(); i++){
+	// 			String ticketArr[] = ticketList.get(i).split("/");
+	// 			String ticketCur = ticketList.get(i);
+	// 			ticketCur += "/" + countUnreadForTicket(idPerson, Integer.parseInt(ticketArr[0])) + "";
+	// 			ticketList.set(i, ticketCur);
+	// 		}
+	// 	} catch (Exception e){
+	// 		e.printStackTrace();
+	// 		System.err.println("Error returning groups");
+	// 		return null;
+	// 	}
+	// 	return ticketList;
 	// }
 
 	public static void main(String[] args) {
