@@ -6,7 +6,7 @@ import java.security.NoSuchAlgorithmException;
 public class SaltGen {
 	private static final int SIZE = 16;
 
-	public static String saltValueGen(){
+	public String saltValueGen(){
 		SecureRandom random = new SecureRandom();
 		byte[] saltBytes = new byte[SIZE]; // salt len = size * 2
 		random.nextBytes(saltBytes);
@@ -17,7 +17,7 @@ public class SaltGen {
 		return salt;
 	}
 
-	public static String hashValueGen(String pwd, String salt){
+	public String hashValueGen(String pwd, String salt){
 		String md5 = "";
 		String pwdAndSalt = pwd + salt;
 		try {
@@ -35,7 +35,7 @@ public class SaltGen {
 		return md5;
 	}
 
-	public static boolean verifPwd(String pwd, String salt, String hashValue){
+	public boolean verifPwd(String pwd, String salt, String hashValue){
 		String hashToVerify = hashValueGen(pwd, salt);
 		return (hashValue.compareTo(hashToVerify) == 0);
 	}
