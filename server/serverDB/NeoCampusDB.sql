@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS TICKET
 CREATE TABLE IF NOT EXISTS MESSAGE
 	(idMsg INT AUTO_INCREMENT,
 	 msgText TEXT,
-	 color ENUM ('GRAY', 'RED', 'ORANGE', 'GREEN'),
+	 color ENUM ('RED', 'ORANGE', 'GREEN'),
 	 idTicket INT, 
 	 idPerson INT,
 	 writeDate DATETIME,
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS MEMBER_OF
 CREATE TABLE IF NOT EXISTS RECEIVE
 	(idPerson INT,
 	 idMsg INT,
-	 status ENUM ('EN ATTENTE', 'RECU', 'LU'),
+	 status ENUM ('RECU', 'LU'),
 	 CONSTRAINT ck_rcv_pers CHECK (idPerson IS NOT NULL),
 	 CONSTRAINT ck_rcv_msg CHECK (idMsg IS NOT NULL),
 	 CONSTRAINT fk_rcv_pers FOREIGN KEY (idPerson) REFERENCES PERSON (idPerson),

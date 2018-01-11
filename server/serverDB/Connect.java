@@ -15,4 +15,8 @@ public class Connect {
 			return null;
 		}
 	}
+
+	public void disconnect(Connection conn){
+		conn.close();
+	}
 }
